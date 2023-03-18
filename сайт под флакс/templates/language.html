@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Языки Программирования</title>
+  <link rel="icon" href="static/img/web icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/navigation.css" id = 'switch_nav'>
+  <link rel="stylesheet" href="../static/css/language.css" id = 'switch_lang'>
+</head>
+
+<body id=body_change>
+
+  <button class=hide_log onclick='show_log()'>Log in</button>
+  <div id='cont_for_log'>
+    <div>Введи логин <input class='design_input' type='text'></div>
+    <div>Введи пароль <input class='design_input' type='password'></div>
+    <button class='design_create'>Войти</button>
+  </div>
+
+  <button class=hide_reg onclick='show_reg()'>Sign up</button>
+  <div id='cont_for_reg'>
+    <div>Введи логин <input class='design_input' type='text'></div>
+    <div>Введи пароль <input class='design_input' type='password'></div>
+    <button class='design_create'>Создать аккаунт</button>
+  </div>
+
+
+<div class='total'>
+<header>
+  <div id="sidebar">
+    <div class="toggle-btn" onclick="openMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li>Меню сайта</li>
+      <li><a href='../index.html'>На главную</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="about.html" id = 'st_kostil'>Про нас</a></li>
+      <div id = theme_line></div>
+      <li><button id = 'go_day_night' onclick = 'turn_night_on()'>На ночную</button></li>
+    </ul>
+  </div>
+</header>
+
+
+    <div class='cards-container'>
+      <div class='design_card'>
+        <div class='design_leng'>
+          <b><a href='langs/_JavaScript.html'>JavaScript</a></b>
+        </div>
+        <div>
+          <a class="design_card_a" href='langs/_JavaScript.html'>JavaScript</a> ("JS" для краткости) - это полноценный динамический язык программирования, который применяется к HTML документу, и может обеспечить динамическую интерактивность на веб-сайтах. 
+        <div class='show_more_info'> </div>
+        </div>
+        <!--<div id="js_text" class='info'>information about JavaScript</div>
+        <p><button class=' design_button' onclick="clickAction('js')">Показать больше</button></p>-->
+      </div>
+
+
+      <div class='design_card'>
+        <div class='design_leng'>
+          <b><a href='langs/_Python.html'>Python</a></b>
+        </div>
+        <div>
+          <a class="design_card_a" href='langs/_Python.html'>Python</a> – универсальный язык рпограммирования высокого уровня, его преимущества: высокая производительность и хорошо читаемый код. Синтаксис питона максимально облегчен, что позволяет выучить его за сравнительно короткое время.
+        </div>
+        <!--<div id="python_text" class='info'>information about Java</div>
+        <p><button class=' design_button' onclick="clickAction('python')">Показать больше</button></p>-->
+      </div>
+
+      <div class='design_card'>
+        <div class='design_leng'>
+          <b><a href='langs/_C++.html'>C++</a></b>
+        </div>
+          <a class="design_card_a" href='langs/_C++.html'>C++</a> - широко использующийся язык программирования для разработки ПО, высокопроизводительных серверов и развлекательных приложений, является одним из самых популярных языков прогарммирования.
+        <!--<div id="c++_text" class='info'>information about C++</div>
+        <p><button class='design_button' onclick="clickAction('c++')">Показать больше</button></p>-->
+      </div>
+
+
+      <div class='design_card'>
+        <div class='design_leng'>
+          <b> <a href='langs/_Swift.html'>Swift</a> </b>
+        </div>
+        <div>
+          <a class="design_card_a" href='langs/_Swift.html'>Swift</a> - язык программирования от Apple с открытым исходным кодом. Предназначен для разработки приложений для iOS и macOS, реже используется в других проектах. Он появился всего в 2014 году как альтернатива Objective-C.
+          <!--<div id="swift_text" class='info'>information about swift</div>
+          <p><button class=' design_button' onclick="clickAction('swift')">Показать больше</button></p>-->
+        </div>
+        </div>
+        
+
+      <div class='design_card'>
+        <div class='design_leng'>
+          <b><a href='langs/_Kotlin.html'>Kotlin</a></b>
+        </div>
+        <div>
+          <a class="design_card_a" href='langs/_Kotlin.html'>Kotlin</a> - язык программирования, созданный в компании JetBrains. Его разработали в 2011 году на замену Java, который в компании считали слишком многословным.. Новый язык получился на 40% компактнее предшественника.
+          <!--<div id="kotlin_text" class='info'>information about Kotlin</div>
+          <p><button class=' design_button' onclick="clickAction('kotlin')">Показать больше</button></p>-->
+        </div>
+      </div>
+
+      <div class='design_card'>
+        <div class='design_leng'>
+          <b><a href='langs/_Java.html'>Java</a></b>
+        </div>
+        <div>
+          <a class="design_card_a" href='langs/_Java.html'>Java</a> - Java – это быстрый, безопасный и надежный язык программирования для всего: от мобильных приложений и корпоративного ПО до приложений для работы с большими данными и серверных технологий.
+          <!--<div id="java_text" class='info'>information about Java</div>
+          <p><button class=' design_button' onclick="clickAction('java')">Показать больше</button></p>
+          <a href=""></a>
+        </div>-->
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!--<a class='go_back' href="../index.html">Вернуться на главную</a>-->
+
+  <!-- <div class="footer">
+  <div>Copyright &copy;2023 <strong>Programist'ы inc</strong>.All Rights Reserved.</div>
+</div> -->
+
+<!-- дань памяти <button class=small_button onclick='turn_night_on()'><img class='small_moon' src="../static/img/ночь1.png"alt=""></button>-->
+
+<script>
+    function openMenu(){document.getElementById("sidebar").classList.toggle('active');}
+</script>
+<script src='../js/local_S.js'></script>
+<script src='../js/lang.js'></script>
+<script src='../js/reg.js'></script>
+<script src='../js/navigation.js'></script>
+</body>
+</html>

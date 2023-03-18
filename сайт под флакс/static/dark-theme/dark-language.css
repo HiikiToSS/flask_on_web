@@ -1,0 +1,75 @@
+.design_card{
+  border-radius: 10px;
+  padding: 15px;
+  width: 270px;
+  background: rgb(40,40,40, .7);
+  color: #A9A9A9; 
+  margin: 20px;
+  flex-wrap: wrap;
+  /* почему то при использовани глассморфизма навиганция залезает под языки*/
+}
+
+.design_card_a{
+  color: #3a88fe;
+  font-size: 18px;
+}
+
+.design_input{
+  width: 100%;
+}
+
+.design_button{
+  padding: 0.6em;
+  border: 1px solid #3a88fe;
+  border-radius: 4px;
+  background: #3a88fe;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+a{
+  color: #A9A9A9;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.design_leng{
+  padding: 5px;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.cards-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+}
+
+.total{
+  display: flex;
+  margin-top: 20px;
+}
+
+.show_more_info{
+  display: none;
+}
+
+.info{
+  display: none;
+}
+
+#sidebar{
+  background: rgb(40,40,40, .4);
+  height: 250px;
+  border-radius: 0px 0px 15px 0px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(1.5px);
+  top: 0px;
+}
+#sidebar ul li a {color: #A9A9A9;}
+#sidebar ul li:first-child{color: #A9A9A9;}
+#sidebar button{color: #A9A9A9;}
+#theme_line{background: rgba(169, 169, 169, .8);}
+/*#sidebar button:hover{}*/

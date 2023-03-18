@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../../static/navigation.css" id = 'switch_nav'>
+  <link rel="stylesheet" href="../../static/langs.css" id = 'switch_langs'>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+  <title>Java</title>
+</head>
+<body>
+<header>
+  <div id="sidebar">
+    <div class="toggle-btn" onclick="openMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li>Меню сайта</li>
+      <li><a href='../language.html'>Языки программирования</a></li>
+      <li><a href="../contacts.html">Контакты</a></li>
+      <li><a href="../about.html">Про нас</a></li>
+      <div id = theme_line></div>
+      <li><button id = 'go_day_night' onclick = 'turn_night_on()'>На ночную</button></li>
+    </ul>
+  </div>
+</header>
+
+<div class = 'cc_for_lang'><div class = cont_for_lang>Java - некоторые называют жабой</div></div>
+
+<div class = cont_for_h_disc>
+<div class = cont_for_desc> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur quod quis, odit reprehenderit doloremque numquam. Itaque, corrupti dolor? Nihil qui dolorum soluta veritatis consectetur commodi reiciendis accusantium ex cupiditate repellat, distinctio natus iste reprehenderit voluptate rerum recusandae alias modi blanditiis veniam molestias obcaecati a quos amet. Autem architecto vitae ea rem ullam. Obcaecati dolor cumque possimus hic voluptatem, perferendis excepturi architecto mollitia qui repellendus, quas eius soluta iste, quo vitae nisi et nam voluptates dicta similique consectetur itaque ipsam quia atque! Quisquam nesciunt nostrum sequi omnis fugiat facere deleniti error eligendi hic, autem aut! Sequi veniam itaque adipisci in accusamus! </div>
+
+<div class = hello_world><div class = cont_for_hello>Hello world на Java</div><img id ='java' src="../../static/img/hi/l_java.png" alt=""></div>
+</div>
+
+<script src='../../js/langs.js'></script>
+<script src='../../js/navigation.js'></script>
+<script>
+      function openMenu() {document.getElementById("sidebar").classList.toggle('active');}
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>О языках {{title}}</title>
+    <link rel="icon" hqref="static/img/web icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/navigation.css" id = 'switch_nav'>
+</head>
+<body>
+
+{%block navi%}
+{{super()}}
+{%endblock%}
+  
+<a href = '/main' id="design_minimalism">Минимализм</a>       
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src='../js/local_S.js'></script>
+<script src='../js/navigation.js'></script>
+<script> 
+    function openMenu() {document.getElementById("sidebar").classList.toggle('active');}
+</script>
+</body>
+
+</html>
+{% block script %}
+{{super()}}
+{% endblock %}
+{%endblock%}
