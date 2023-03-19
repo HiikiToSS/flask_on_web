@@ -1,22 +1,25 @@
+{%block head%}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {%block link%}
-    <link type='text/css' rel="stylesheet" href='../static/css/base.css'>
-    {%endblock%}
+    <link type='text/css' rel="stylesheet" href="url_for('static', filename = 'css/base.css')" id="switch_nav">
+    <link rel="icon" href="static/img/web icon.png">
     {% block title %}
     {%if title%}
-    <title>Про Flask - {{title}}</title>
+    <title>О ЯП'ах - {{title}}</title>
     {%else%}
-    <title>Про Flask</title>
+    <title>О ЯП'ах</title>
     {%endif%}
     {% endblock %}
 </head>
-<body>
+{%endblock%}
 {%block content%}
+<body>
+
     {%block navi%}
     <header>
         <div id="sidebar">
@@ -37,14 +40,14 @@
     </header>
     {%endblock%}
 {%block script%}
-<script src='../js/local_S.js'></script>
-<script src='../js/navigation.js'></script>
+<script src='{{url_for("static",filename="js/local_S.js")}}'></script>
+<script src='{{url_for("static",filename="js/navigation.js")}}'`></script>
 <script>
 function openMenu(){
     document.getElementById("sidebar").classList.toggle('active');
     }
 </script>
 {%endblock%}
-{%endblock%}
 </body>
 </html>
+{%endblock%}

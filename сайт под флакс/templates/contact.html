@@ -1,57 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="icon" href="static/img/web icon.png">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Контакты</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/contacts.css" id = 'switch_contacts'>
-  <link rel="stylesheet" href="../static/css/navigation.css" id = 'switch_nav'>
-</head>
-<body>
-<header>
-  <div id="sidebar">
-    <div class="toggle-btn" onclick="openMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <ul>
-      <li>Меню сайта</li>
-      <li><a href="language.html">Языки программирования</a></li>
-      <li><a href="../index.html">На главную</a></li>
-      <li><a href="about.html">Про нас</a></li>
-      <div id = theme_line></div>
-      <li><button id = 'go_day_night' onclick = 'turn_night_on()'>На ночную</button></li>
-    </ul>
-    </div>
-</header>
+{%extends "base.html"%}
 
-<!--<button onclick = 'turn_night_on()'>на темную</button>-->
+{%block head%}
+{{super()}}
+    <title>{{title}}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/contacts.css" id = 'switch_contacts'>
+{%endblock%}
+
+
+{%block content%}
+
+{%block navi%}
+{{super()}}
+{%endblock%}
   
+
 <div id = cont_for_contacts>
-  <div id = conta_1>
-    <div id = cont_for_numb>+7 (926) 798-89-61</div>
-  </div>
-  <div id = conta_2>
-    <div id = cont_for_mail>tephton1200@gmail.com</div>
-  </div>
-  <div id = conta_3>
-    <div id = cont_for_social>Телеграмм: @Kafiynik   Вк: ares_0377</div>
-  </div>
+    <div id = conta_1>
+        <div id = cont_for_numb>+7 (926) 798-89-61</div>
+    </div>
+    <div id = conta_2>
+        <div id = cont_for_mail>{{gmail}}</div>
+    </div>
+    <div id = conta_3>
+        <div id = cont_for_social>Телеграмм: {{tg}}   Вк: {{vk}}</div>
+    </div>
 </div>
 
 <!--<a class = 'go_back' href="../index.html">Вернуться на главную</a>-->
-  
-<script src='../js/local_S.js'></script>
-<script src='../js/contacts.js'></script>
-<script src='../js/navigation.js'></script>
-<script>
-      function openMenu() {document.getElementById("sidebar").classList.toggle('active');}
-</script>
-</body>
-</html>
+
+{%block script%}
+{{super()}}
+{%endblock%}
+{%endblock%}

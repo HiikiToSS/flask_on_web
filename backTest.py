@@ -1,6 +1,11 @@
 from flask import Flask, render_template, request, flash, redirect, session, url_for, abort
 
-app = Flask(__name__)
+app = Flask( __name__,
+    template_folder='templates',
+    static_folder='static'   
+)
+
+
 app.config['SECRET_KEY'] = 'LmaoWhatAPassword'
 
 menu = [
@@ -19,7 +24,7 @@ nav_menu = [
 @app.route('/')
 @app.route('/main')
 def index():
-    return render_template('__index.html', title='Главная', navi_menu=nav_menu)
+    return render_template('AAindex.html', title='Главная', navi_menu=nav_menu)
 
 @app.route('/language')
 def language():
@@ -27,11 +32,15 @@ def language():
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html', title='Контакты', navi_menu=nav_menu)
+    return render_template('contact.html', title='Контакты', navi_menu=nav_menu, tg='@Kafiynik', vk='ares_0377', gmail='tephton1200@gmail.com')
 
 @app.route('/about')
 def about():
-    return render_template('about.html', title='О сайте')
+    return render_template('about.html', title='О сайте', navi_menu=nav_menu)
+
+@app.route('/test')
+def test():
+    return render_template('z_test.html', title='Тестовая страница')
 
 @app.errorhandler(404)
 def NotFound(error):

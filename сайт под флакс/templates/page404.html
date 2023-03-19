@@ -1,6 +1,6 @@
 {%extends "base.html"%}
 
-{%block link%}
+{%block head%}
 {{super()}}
 <link rel="stylesheet" href="../static/css/page404.css">
 {%endblock%}
@@ -12,7 +12,7 @@
 {%endblock%}
 
 <div class="h1_div"><h1>К сожалению, пока что у нас нет такой странички</h1></div>
-{% block script %}
+{%block script%}
 {{super()}}
-{% endblock %}
+{%endblock%}
 {%endblock%}
