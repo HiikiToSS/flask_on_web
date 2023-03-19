@@ -5,7 +5,6 @@ app = Flask( __name__,
     static_folder='static'   
 )
 
-
 app.config['SECRET_KEY'] = 'LmaoWhatAPassword'
 
 menu = [
@@ -24,7 +23,7 @@ nav_menu = [
 @app.route('/')
 @app.route('/main')
 def index():
-    return render_template('AAindex.html', title='Главная', navi_menu=nav_menu)
+    return render_template('mainPage.html', title='Главная', navi_menu=nav_menu)
 
 @app.route('/language')
 def language():
