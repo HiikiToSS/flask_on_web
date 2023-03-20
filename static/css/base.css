@@ -29,12 +29,10 @@ html, body{
 #sidebar{
     font-family: 'Montserrat', sans-serif;
     position: fixed;
-    width: 250px;
-    /*height: 20%;*/
     background: transparent;
     left: -270px;  
     transition: left 600ms, height 0ms;
-    transition-delay: 0ms, 600ms;
+
 }
 #sidebar ul li:first-child {
     font-family: 'Montserrat', sans-serif;

@@ -13,8 +13,6 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation-name: slow-show;
-    animation-duration: 2s;
 }
 
 #design_minimalism{
@@ -27,11 +25,13 @@ html, body {
     min-height: 1em;
     width: 7em;
     transition: color 1.5s;
+    animation-name: slow-show;
+    animation-duration: 2s;
 } 
 
 @keyframes slow-show{
     0%{
-        transform: translateY(30%);
+        transform: translateY(130%);
         opacity: 0;
     }
     100%{

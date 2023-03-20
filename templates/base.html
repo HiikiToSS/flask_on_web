@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type='text/css' rel="stylesheet" href="url_for('static', filename = 'css/base.css')" id="switch_nav">
+    <link type='text/css' rel="stylesheet" href="../static/css/base.css">
     <link rel="icon" href="static/img/web icon.png">
     {% block title %}
     {%if title%}
@@ -34,7 +34,7 @@
                 <li><a href="{{el.url}}">{{el.name}}</a></li>
                 {% endfor %}
                 <div id = theme_line></div>
-                <div><button id = 'go_day_night' onclick = 'turn_night_on()'>На дневную</button></div>
+                <li><div><button id = 'go_day_night' onclick = 'turn_night_on()'>На дневную</button></div></li>
             </ul>
         </div>
     </header>
