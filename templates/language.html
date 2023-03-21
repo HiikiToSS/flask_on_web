@@ -29,16 +29,17 @@
 {{super()}}
 {%endblock%}
 
+
 <div class='total'>
 <div class='cards-container'>
     {% for el in language_description%}
     <div class='design_card'>
         <div class='design_leng'>
-            <b><a href='langs/{{el.link}}'>{{el.lang_name}}</a></b>
+            <b><a href='langs/{{el["link"]}}'>{{el["lang_name"]}}</a></b>
         </div>
         <div>
-            <a class="design_card_a" href='langs/{{el.link}}'>{{el.lang_name}}</a>   
-            {{el.desc}}
+            <a class="design_card_a" href='langs/{{el["link"]}}'>{{el["lang_name"]}}</a>   
+            {{el["desc"]}}
         </div>
     </div>
     {% endfor %}

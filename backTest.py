@@ -1,48 +1,41 @@
 from flask import Flask, render_template, request, flash, redirect, session, url_for, abort
 from pymongo import MongoClient
 import pymongo
-import dns.resolver
-dns.resolver.default_resolver=dns.resolver.Resolver(configure=False)
-dns.resolver.default_resolver.nameservers=['8.8.8.8']
+import pprint
+import time
+
+# import dns.resolver
+# dns.resolver.default_resolver=dns.resolver.Resolver(configure=False)
+# dns.resolver.default_resolver.nameservers=['8.8.8.8']
 
 
-CONNECTION_STRING = "mongodb+srv://hikki_bd:Ares_0377@cluster0.odpkw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-
+CONNECTION_STRING = "mongodb+srv://hikki_bd:Ares_0377@cluster0.yv7ke.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 client = MongoClient(CONNECTION_STRING)
-db = client['db_for_prog_wiki']
-collection = db["lang_names"] # создаём коллекцию
+db = client['NOT_fucking_db_for_test'] #DATA_BASE_for_prog_wiki_ru
+collection = db["Data-for-language-html"] # создаём коллекцию
+
 
 app = Flask( __name__,
     template_folder='templates',
     static_folder='static'   
 )
 
-lang_desc = [
-    {'lang_name' : 'JS', 'link' : '_JavaScript.html', 'desc' : '("JS" для краткости) - это полноценный динамический язык программирования, который применяется к HTML документу, и может обеспечить динамическую интерактивность на веб-сайтах.'},
-    {'lang_name' : 'Python', 'link' : '_Python.html', 'desc' : ' – универсальный язык рпограммирования высокого уровня, его преимущества: высокая производительность и хорошо читаемый код. Синтаксис питона максимально облегчен, что позволяет выучить его за сравнительно короткое время.'},
-    {'lang_name' : 'C++', 'link' : '_C++.html', 'desc' : ' - широко использующийся язык программирования для разработки ПО, высокопроизводительных серверов и развлекательных приложений, является одним из самых популярных языков прогарммирования.'},
-    {'lang_name' : 'Swift', 'link' : '_Swift.html', 'desc' : ' - язык программирования от Apple с открытым исходным кодом. Предназначен для разработки приложений для iOS и macOS, реже используется в других проектах. Он появился всего в 2014 году как альтернатива Objective-C.'},
-    {'lang_name' : 'Kotlin', 'link' : '_Kotlin.html', 'desc' : ' - язык программирования, созданный в компании JetBrains. Его разработали в 2011 году на замену Java, который в компании считали слишком многословным.. Новый язык получился на 40% компактнее предшественника.'},
-    {'lang_name' : 'Java', 'link' : '_Java.html', 'desc' : ' - Java – это быстрый, безопасный и надежный язык программирования для всего: от мобильных приложений и корпоративного ПО до приложений для работы с большими данными и серверных технологий.'},
+lang_desc_add = [
+    # {'lang_name' : 'JS', 'link' : '_JavaScript.html', 'desc' : '("JS" для краткости) - это полноценный динамический язык программирования, который применяется к HTML документу, и может обеспечить динамическую интерактивность на веб-сайтах.'},
+    # {'lang_name' : 'Python', 'link' : '_Python.html', 'desc' : ' – универсальный язык рпограммирования высокого уровня, его преимущества: высокая производительность и хорошо читаемый код. Синтаксис питона максимально облегчен, что позволяет выучить его за сравнительно короткое время.'},
+    # {'lang_name' : 'C++', 'link' : '_C++.html', 'desc' : ' - широко использующийся язык программирования для разработки ПО, высокопроизводительных серверов и развлекательных приложений, является одним из самых популярных языков прогарммирования.'},
+    # {'lang_name' : 'Swift', 'link' : '_Swift.html', 'desc' : ' - язык программирования от Apple с открытым исходным кодом. Предназначен для разработки приложений для iOS и macOS, реже используется в других проектах. Он появился всего в 2014 году как альтернатива Objective-C.'},
+    # {'lang_name' : 'Kotlin', 'link' : '_Kotlin.html', 'desc' : ' - язык программирования, созданный в компании JetBrains. Его разработали в 2011 году на замену Java, который в компании считали слишком многословным.. Новый язык получился на 40% компактнее предшественника.'},
+    # {'lang_name' : 'Java', 'link' : '_Java.html', 'desc' : ' - Java – это быстрый, безопасный и надежный язык программирования для всего: от мобильных приложений и корпоративного ПО до приложений для работы с большими данными и серверных технологий.'},
 ]
 
-desc_bd = {
-    'lang_name' : 'JS',
-    'link' : '_JavaScript.html',
-    'desc' : '("JS" для краткости) - это полноценный динамический язык программирования, который применяется к HTML документу, и может обеспечить динамическую интерактивность на веб-сайтах.'
-}
-collection.insert_one(desc_bd)
+# collection.insert_many(lang_desc_add)
 
-names = collection.find()
-print(names)
+langs_description = collection.find()
+# for el in langs_description:
+#     print(el)
 
 app.config['SECRET_KEY'] = 'LmaoWhatAPassword'
-
-menu = [
-    {'name' : 'О сайте', 'url' : 'about'},
-    {'name' : 'Обратная связь', 'url' : 'contact'},
-    {'name' : 'Информация', 'url' : 'info'}
-    ]
 
 nav_menu = [
     {'name' : 'О сайте', 'url' : 'about'},
@@ -58,7 +51,7 @@ def index():
 
 @app.route('/language')
 def language():
-    return render_template('language.html', title='Языки программирования', navi_menu=nav_menu, language_description=lang_desc)
+    return render_template('language.html', title='Языки программирования', navi_menu=nav_menu, language_description=langs_description)
 
 @app.route('/contact')
 def contact():
