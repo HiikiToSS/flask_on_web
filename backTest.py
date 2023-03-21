@@ -1,4 +1,16 @@
 from flask import Flask, render_template, request, flash, redirect, session, url_for, abort
+from pymongo import MongoClient
+import pymongo
+import dns.resolver
+dns.resolver.default_resolver=dns.resolver.Resolver(configure=False)
+dns.resolver.default_resolver.nameservers=['8.8.8.8']
+
+
+CONNECTION_STRING = "mongodb+srv://hikki_bd:Ares_0377@cluster0.odpkw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
+client = MongoClient(CONNECTION_STRING)
+db = client['db_for_prog_wiki']
+collection = db["lang_names"] # создаём коллекцию
 
 app = Flask( __name__,
     template_folder='templates',
@@ -13,6 +25,16 @@ lang_desc = [
     {'lang_name' : 'Kotlin', 'link' : '_Kotlin.html', 'desc' : ' - язык программирования, созданный в компании JetBrains. Его разработали в 2011 году на замену Java, который в компании считали слишком многословным.. Новый язык получился на 40% компактнее предшественника.'},
     {'lang_name' : 'Java', 'link' : '_Java.html', 'desc' : ' - Java – это быстрый, безопасный и надежный язык программирования для всего: от мобильных приложений и корпоративного ПО до приложений для работы с большими данными и серверных технологий.'},
 ]
+
+desc_bd = {
+    'lang_name' : 'JS',
+    'link' : '_JavaScript.html',
+    'desc' : '("JS" для краткости) - это полноценный динамический язык программирования, который применяется к HTML документу, и может обеспечить динамическую интерактивность на веб-сайтах.'
+}
+collection.insert_one(desc_bd)
+
+names = collection.find()
+print(names)
 
 app.config['SECRET_KEY'] = 'LmaoWhatAPassword'
 
