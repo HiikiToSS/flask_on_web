@@ -1,13 +1,12 @@
-{%block head%}
 <!DOCTYPE html>
 <html lang="en">
-
+{%block head%}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type='text/css' rel="stylesheet" href="../static/css/base.css">
-    <link rel="icon" href="static/img/web icon.png">
+    <link type='text/css' rel="stylesheet" href="../static/css/baseStyle.css" id='switch_nav'>
+    <link rel="icon" href="../static/img/ночь1.png">
     {% block title %}
     {%if title%}
     <title>О ЯП'ах - {{title}}</title>
@@ -34,19 +33,49 @@
                 <li><a href="{{el.url}}">{{el.name}}</a></li>
                 {% endfor %}
                 <div id = theme_line></div>
-                <li><div><button id = 'go_day_night' onclick = 'turn_night_on()'>На дневную</button></div></li>
+                <li><div><button id = 'go_day_night' onclick = 'turn_night_on()'>На ночную</button></div></li>
             </ul>
         </div>
     </header>
     {%endblock%}
+
 {%block script%}
-<script src='{{url_for("static",filename="js/local_S.js")}}'></script>
-<script src='{{url_for("static",filename="js/navi.js")}}'`></script>
+<script>
+let nav_theme = document.getElementById("switch_nav")
+let day_night_text = document.getElementById("go_day_night")
+
+if (localStorage.getItem('theme') == "true"){
+    console.log('Смена на темную')
+    nav_theme.href = "C:/Users/nifi2/Documents/фласк на веб'е/flask_on_web-2/static/dark-theme/navigation-dark.css"
+    if (day_night_text){day_night_text.innerHTML = 'На дневную'}
+}
+
+else{
+    console.log('Смена на светлую')
+    nav_theme.href = "C:/Users/nifi2/Documents/фласк на веб'е/flask_on_web-2/static/css/baseStyle.css"
+    if (day_night_text){day_night_text.innerHTML = 'На ночную'}
+}
+</script>
+
+
+<script>
+    function turn_night_on(){
+    if (localStorage.getItem('theme') == "true"){
+        localStorage.setItem('theme', "false")
+    }
+    else{
+        localStorage.setItem('theme', "true")
+    }
+    //document.location.reload()
+}
+</script>
+
+
 <script>
 function openMenu(){
     document.getElementById("sidebar").classList.toggle('active');
     }
-</script>
+</script> 
 {%endblock%}
 </body>
 </html>

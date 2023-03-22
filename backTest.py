@@ -31,7 +31,6 @@ lang_desc_add = [
 
 # collection.insert_many(lang_desc_add)
 
-langs_description = collection.find()
 # for el in langs_description:
 #     print(el)
 
@@ -51,6 +50,7 @@ def index():
 
 @app.route('/language')
 def language():
+    langs_description = collection.find()
     return render_template('language.html', title='Языки программирования', navi_menu=nav_menu, language_description=langs_description)
 
 @app.route('/contact')
