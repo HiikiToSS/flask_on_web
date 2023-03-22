@@ -32,7 +32,7 @@
 
 <div class='total'>
 <div class='cards-container'>
-    {% for el in language_description%}
+    {%for el in language_description%}
     <div class='design_card'>
         <div class='design_leng'>
             <b><a href='langs/{{el["link"]}}'>{{el["lang_name"]}}</a></b>
@@ -42,7 +42,7 @@
             {{el["desc"]}}
         </div>
     </div>
-    {% endfor %}
+    {%endfor%}
 </div>
 </div>
   <!--<a class='go_back' href="../index.html">Вернуться на главную</a>-->
