@@ -39,18 +39,38 @@
     </header>
     {%endblock%}
 
-<a href="{{url_for('static', filename = 'css/baseStyle')}}" id="day_href_css"></a>
-<a href="{{url_for('static', filename = 'dark-theme/navigation-dark')}}" id="night_href_css"></a>
+<a id="href_day" href="../css/baseStyle.css"></a>  {{url_for('static', filename='css/baseStyle.css')}}
+<a id="href_night" href="../dark-theme/navi-dark.css"></a>  {{url_for('static', filename='dark-theme/navi-dark.css')}}
 
-</body>
-</html>
 {%endblock%}
+
+
+
 {%block script%}
-<script src="{{url_for('static', filename='js/navi.js')}}"></script>
-<script src="{{url_for('static', filename='js/local_S.js')}}"></script>
 <script>
+var nav_theme = document.getElementById("switch_nav")
+var day_night_text = document.getElementById("go_day_night")
+
+// var dayLink = document.getElementById("href_day")
+// var nightLink = document.getElementById("href_night")
+
+if (localStorage.getItem('theme') == "true"){
+    nav_theme.href = "{{url_for('static', filename='dark-theme/navi-dark.css')}}"
+    // nav_theme.href = dayLink.href
+    if (day_night_text){day_night_text.innerHTML = 'На дневную'}
+}
+
+else{
+    nav_theme.href = "{{url_for('static', filename='css/baseStyle.css')}}"
+    // nav_theme.href = nightLink.href
+    if (day_night_text){day_night_text.innerHTML = 'На ночную'}
+}
+
 function openMenu(){
     document.getElementById("sidebar").classList.toggle('active');
-    }
-</script> 
+}
+</script>
+<script src="{{url_for('static', filename='js/local_S.js')}}"></script>
 {%endblock%}
+</body>
+</html>
