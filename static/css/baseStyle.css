@@ -89,7 +89,6 @@ html, body{
 }
 #sidebar.active {
     left: 0px;
-    /*height: 20%;*/
     transition: left 600ms, height 0ms;
 }
 
@@ -163,8 +162,6 @@ html, body{
         opacity: 1;
     }
 }
-
-
 
 .hide_log{
     background: rgba(255, 255, 255, .8);

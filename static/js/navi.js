@@ -7,6 +7,10 @@ if (localStorage.getItem('theme') == "true"){
 }
 
 else{
-    nav_theme.href = '../css/base.css'
+    nav_theme.href = '../css/baseStyle.css'
     if (day_night_text){day_night_text.innerHTML = 'На ночную'}
+}
+
+function openMenu(){
+    document.getElementById("sidebar").classList.toggle('active');
 }
