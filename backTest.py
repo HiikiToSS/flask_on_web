@@ -39,10 +39,10 @@ lang_desc_add = [
 app.config['SECRET_KEY'] = 'LmaoWhatAPassword'
 
 nav_menu = [
-    {'name' : 'О сайте', 'url' : 'about'},
+    {'name' : 'На главную', 'url' : 'main'},
     {'name' : 'Языки программирования', 'url' : 'language'},
-    {'name' : 'Контакты', 'url' : 'contact'},
-    {'name' : 'На главную', 'url' : 'main'}
+    {'name' : 'О сайте', 'url' : 'about'},
+    {'name' : 'Контакты', 'url' : 'contact'}
 ]
 
 @app.route('/')
@@ -52,7 +52,8 @@ def index():
 
 @app.route('/language')
 def language():
-    langs_description = collection.find()
+    langs_description = collection.find() # Getting info about langs from db, but it takes too long. I have to fix it
+
     return render_template('language.html', title='Языки программирования', navi_menu=nav_menu, language_description=lang_desc_add)
 
 @app.route('/contact')

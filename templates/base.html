@@ -39,29 +39,37 @@
     </header>
     {%endblock%}
 
+<a id="href_day" href="../css/baseStyle.css"></a>  {{url_for('static', filename='css/baseStyle.css')}}
+<a id="href_night" href="../dark-theme/navi-dark.css"></a>  {{url_for('static', filename='dark-theme/navi-dark.css')}}
+
+{%endblock%}
+
+
+
 {%block script%}
 
 <script src="{{url_for('static', filename='js/local_S.js')}}"></script>
 
 <script>
-var nav_theme = document.getElementById("switch_nav")
-var day_night_text = document.getElementById("go_day_night")
+let nav_theme = document.getElementById("switch_nav")
+let day_night_text = document.getElementById("go_day_night")
 
 if (localStorage.getItem('theme') == "true"){
-    nav_theme.href = "{{url_for('static', filename='dark-theme/navigation-dark.css')}}"
+    console.log('Смена на темную')
+    nav_theme.href = "C:/Users/nifi2/Documents/фласк на веб'е/flask_on_web-2/static/dark-theme/navigation-dark.css"
     if (day_night_text){day_night_text.innerHTML = 'На дневную'}
 }
 
 else{
-    nav_theme.href = "{{url_for('static', filename='css/baseStyle.css')}}"
+    console.log('Смена на светлую')
+    nav_theme.href = "C:/Users/nifi2/Documents/фласк на веб'е/flask_on_web-2/static/css/baseStyle.css"
     if (day_night_text){day_night_text.innerHTML = 'На ночную'}
 }
 
 function openMenu(){
     document.getElementById("sidebar").classList.toggle('active');
-}
-</script>
+    }
+</script> 
 {%endblock%}
 </body>
 </html>
-{%endblock%}
