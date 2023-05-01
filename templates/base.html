@@ -2,11 +2,16 @@
 <html lang="en">
 {%block head%}
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type='text/css' rel="stylesheet" href="../static/css/baseStyle.css" id="switch_nav">
-    <link rel="icon" href="../static/img/ночь1.png">
+    <!--<link rel="icon" href="../static/img/ночь1.png"> оно как бы работает, но не всегда(или вообще), мб надо бует найти новую-->
+    <link rel="icon" hqref="static/img/web icon.png">
+
     {% block title %}
     {%if title%}
     <title>О ЯП'ах - {{title}}</title>
@@ -46,7 +51,26 @@
 </html>
 {%endblock%}
 {%block script%}
-<script src="{{url_for('static', filename='js/navi.js')}}"></script>
+
+
+<script>
+
+let nav_theme = document.getElementById("switch_nav")
+let day_night_text = document.getElementById("go_day_night")
+
+if (localStorage.getItem('theme') == "true"){
+    nav_theme.href = "{{url_for('static', filename='dark-theme/navi-dark.css')}}"
+    if (day_night_text){day_night_text.innerHTML = 'На дневную'}
+}
+
+else{
+    nav_theme.href = "{{url_for('static', filename='css/baseStyle.css')}}"
+    if (day_night_text){day_night_text.innerHTML = 'На ночную'}
+}
+
+</script>
+
+
 <script src="{{url_for('static', filename='js/local_S.js')}}"></script>
 <script>
 function openMenu(){

@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+
+{%block head%}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/langs.css')}}" id = 'switch_langs'>
+{%endblock%}
+
+{%block content%}
+
+<div class = 'cc_for_lang'><div class = cont_for_lang>{{langInfo.title}}</div></div>
+
+<div class = cont_for_h_disc>
+<div class = cont_for_desc> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur quod quis, odit reprehenderit doloremque numquam. Itaque, corrupti dolor? Nihil qui dolorum soluta veritatis consectetur commodi reiciendis accusantium ex cupiditate repellat, distinctio natus iste reprehenderit voluptate rerum recusandae alias modi blanditiis veniam molestias obcaecati a quos amet. Autem architecto vitae ea rem ullam. Obcaecati dolor cumque possimus hic voluptatem, perferendis excepturi architecto mollitia qui repellendus, quas eius soluta iste, quo vitae nisi et nam voluptates dicta similique consectetur itaque ipsam quia atque! Quisquam nesciunt nostrum sequi omnis fugiat facere deleniti error eligendi hic, autem aut! Sequi veniam itaque adipisci in accusamus! </div>
+
+<div class = hello_world><div class = cont_for_hello>{{langInfo.hello}}</div><img id = 'c_' src="../../static/img/hi/l_c++.png" alt=""></div>
+</div>
+
+<!-- Нужна здэлатб адаптывным, очинь!!1 -->
+
+{%block navi%}
+{{super()}}
+{%endblock%}
+  
+{%endblock%}
