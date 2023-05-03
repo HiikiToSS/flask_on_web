@@ -21,34 +21,34 @@ app = Flask( __name__,
 )
 
 lang_desc_add = [
-    {'lang_name' : 'JS', 'link' : '_JavaScript.html', 
+    {'lang_name' : 'JavaScript', 'link' : 'JavaScript', 
         'title' : 'JavaScript - как живая вода для сайтов', 'hello' : 'Hello World на JavaScript', 
-        'photo' : '',
+        'photoLight' : 'l_js.png', 'photoDark' : '_js.png',
         'desc' : '("JS" для краткости) - это полноценный динамический язык программирования, который применяется к HTML документу, и может обеспечить динамическую интерактивность на веб-сайтах.'},
     
-    {'lang_name' : 'Python', 'link' : '_Python.html', 
+    {'lang_name' : 'Python', 'link' : 'Python', 
         'title' : 'Python - простой и понятный даже чайнику', 'hello' : 'Hello World на Python', 
-        'photo' : '',
+        'photoLight' : 'l_python.png', 'photoDark' : '_python.png',
         'desc' : ' – универсальный язык рпограммирования высокого уровня, его преимущества: высокая производительность и хорошо читаемый код. Синтаксис питона максимально облегчен, что позволяет выучить его за сравнительно короткое время.'},
     
-    {'lang_name' : 'C++', 'link' : '_C++.html', 
+    {'lang_name' : 'C++', 'link' : 'C++', 
         'title' : 'C++ - о его сложности слагают легенды...', 'hello' : 'Hello World на C++', 
-        'photo' : '',
+        'photoLight' : 'l_c++.png', 'photoDark' : '_c++.png',
         'desc' : ' - широко использующийся язык программирования для разработки ПО, высокопроизводительных серверов и развлекательных приложений, является одним из самых популярных языков прогарммирования.'},
     
-    {'lang_name' : 'Swift', 'link' : '_Swift.html', 
+    {'lang_name' : 'Swift', 'link' : 'Swift', 
         'title' : 'Swift - что-то на богатом', 'hello' : 'Hello World на Swift', 
-        'photo' : '',
+        'photoLght' : 'l_swift.png', 'photoDark' : '_swift.png',
         'desc' : ' - язык программирования от Apple с открытым исходным кодом. Предназначен для разработки приложений для iOS и macOS, реже используется в других проектах. Он появился всего в 2014 году как альтернатива Objective-C.'},
     
-    {'lang_name' : 'Kotlin', 'link' : '_Kotlin.html', 
+    {'lang_name' : 'Kotlin', 'link' : 'Kotlin', 
         'title' : 'Kotlin - для android приложений', 'hello' : 'Hello World на Kotlin', 
-        'photo' : '',
+        'photoLight' : 'l_kotlin.png', 'photoDark' : '_kotlin.png',
         'desc' : ' - язык программирования, созданный в компании JetBrains. Его разработали в 2011 году на замену Java, который в компании считали слишком многословным.. Новый язык получился на 40% компактнее предшественника.'},
     
-    {'lang_name' : 'Java', 'link' : '_Java.html', 
+    {'lang_name' : 'Java', 'link' : 'Java', 
         'title' : 'Java - некоторые называют жабой', 'hello' : 'Hello World на Java', 
-        'photo' : '',
+        'photoLight' : 'l_java.png', 'photoDark' : '_java.png',
         'desc' : ' - Java – это быстрый, безопасный и надежный язык программирования для всего: от мобильных приложений и корпоративного ПО до приложений для работы с большими данными и серверных технологий.'},
 ]
 
@@ -96,7 +96,7 @@ def NotFound(error):
 def allLLpage(name):
    for el in lang_desc_add:
      if el["lang_name"] == name:
-        return render_template("AllPage.html", langInfo = el)
+        return render_template("AllPage.html", langInfo = el, navi_menu=nav_menu)
 
 if __name__ == '__main__':
     app.run(debug=True)

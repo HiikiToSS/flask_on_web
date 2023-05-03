@@ -1,7 +1,7 @@
 *{
-  padding: 0;
-  margin: 0;
-  font-family: "Montserrat";
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat";
 }
 
 html, body{
@@ -9,242 +9,242 @@ html, body{
 }
 
 body{
-  height: 100vh;
-  width: 100vw;
-  background: url("../img/обои ночь.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: url("../img/обои ночь.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /*.small_moon{
-  height: 15px;
-  width: 15px;
+    height: 15px;
+    width: 15px;
 }
 
 .small_button{
-  background: rgba(0, 0, 0, 0);
-  border: none
+    background: rgba(0, 0, 0, 0);
+    border: none
 }*/
 
 #sidebar{
-  font-family: 'Montserrat', sans-serif;
-  position: fixed;
-  width: 250px;
-  height: 100%;
-  background: transparent;
-  left: -254px;
-  transition: left 600ms, height 0ms;
-  transition-delay: 0ms, 600ms;
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: transparent;
+    left: -254px;
+    transition: left 600ms, height 0ms;
+    transition-delay: 0ms, 600ms;
 }
 #sidebar ul li:first-child {
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  color: #A9A9A9;
-  font-size: 1.95em;
-  list-style: none;
-  padding: 20px 10px 10px 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #b9b5b5;
+    font-size: 2em;
+    list-style: none;
+    padding: 20px 10px 10px 10px;
 }
 #sidebar ul li:not(:first-child) {
-  width: 90%;
-  margin-left: 10%;
-  font-size: 1.1em;
-  list-style: none;
-  padding: 15px 10px
+    width: 90%;
+    margin-left: 10%;
+    font-size: 1.1em;
+    list-style: none;
+    padding: 15px 10px
 }
 #sidebar ul li a {
-  font-family: 'Montserrat', sans-serif;
-  color: #A9A9A9;
-  text-decoration: none;
-  transition: 500ms color;
+    font-family: 'Montserrat', sans-serif;
+    color: #A9A9A9;
+    text-decoration: none;
+    transition: 500ms color;
 }
 #sidebar a:hover{
- color:  #d4d4d4
+    color:  #d4d4d4
 }
 #sidebar button {
-  color: #A9A9A9;
-  font-size: 1.1em;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  transition: 500ms color;
+    color: #A9A9A9;
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    transition: 500ms color;
 }
 #sidebar button:hover{
- color:  #d4d4d4
+    color:  #d4d4d4
 }
 #sidebar .toggle-btn {
-  position: absolute;
-  left: 265px;
-  top: 20px;
-  padding: 10px;
-  border-radius: 12px;
-  cursor: pointer;
+    position: absolute;
+    left: 265px;
+    top: 20px;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
 #sidebar .toggle-btn span {
-  display: block;
-  width: 25px;
-  height: 4px;
-  background-color: #bababa;
-  margin: 4px 0;
-  transition: 500ms;
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: #bababa;
+    margin: 4px 0;
+    transition: 500ms;
 }
 #sidebar.active {
-  left: 0px;
-  height: 35%;
-  transition: left 600ms, height 0ms;
+    left: 0px;
+    height: auto;
+    transition: left 600ms, height 0ms;
 }
 
 .footer{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 5px;
-  color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 5px;
+    color: white;
 }
 
 .go_back{
-  color: #A9A9A9;
-  list-style-type: none;
-  text-decoration: none;
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  z-index:3;
+    color: #A9A9A9;
+    list-style-type: none;
+    text-decoration: none;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    z-index:3;
 }
 
 .hide_reg{
-  color: #A9A9A9;
-  background: rgb(40,40,40, .7);
-  top: 5px;
-  right: 75px;
-  border: none;
-  border-radius: 5px;
-  padding: 3px;
-  font-size: 15px;
-  position: absolute;
+    color: #A9A9A9;
+    background: rgb(40,40,40, .7);
+    top: 5px;
+    right: 75px;
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 15px;
+    position: absolute;
 }
 
 
 #cont_for_reg:before, #cont_for_reg:after{
-  content: '';
-  position: absolute;
-  left: 83%;
-  margin-left: -15px;
+    content: '';
+    position: absolute;
+    left: 83%;
+    margin-left: -15px;
 }
 #cont_for_reg:after{
-  top: -30px;
-  border: 15px solid transparent;
-  border-bottom: 15px solid rgb(40,40,40, .7);
+    top: -30px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid rgb(40,40,40, .7);
 }
 
 #cont_for_reg{
-  width: 160px;
-  color: #A9A9A9;
-  background: rgb(40,40,40, .7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(1px);
-  padding: 10px;
-  border-radius: 5px;
-  top: 50px;
-  right: 72px;
-  position: absolute;
-  opacity: 0;
+    width: 160px;
+    color: #A9A9A9;
+    background: rgb(40,40,40, .7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(1px);
+    padding: 10px;
+    border-radius: 5px;
+    top: 50px;
+    right: 72px;
+    position: absolute;
+    opacity: 0;
 }
 
 .animation_for_reg{
-  animation-name: show_reg;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+    animation-name: show_reg;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes show_reg{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 
 
 .hide_log{
-  color: #A9A9A9;
-  background: rgb(40,40,40, .7);
-  border: none;
-  border-radius: 5px;
-  padding: 3px;
-  font-size: 15px;
-  position: absolute;
-  top: 5px;
-  right: 15px;
+    color: #A9A9A9;
+    background: rgb(40,40,40, .7);
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 15px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
 }
 
 #cont_for_log:before, #cont_for_log:after{
-  content: '';
-  position: absolute;
-  left: 83%;
-  margin-left: -15px;
+    content: '';
+    position: absolute;
+    left: 83%;
+    margin-left: -15px;
 }
 #cont_for_log:after{
-  top: -30px;
-  border: 15px solid transparent;
-  color: #A9A9A9;
-  border-bottom: 15px solid rgb(40,40,40, .7);
+    top: -30px;
+    border: 15px solid transparent;
+    color: #A9A9A9;
+    border-bottom: 15px solid rgb(40,40,40, .7);
 }
 
 #cont_for_log{
-  width: 160px;
-  color: #A9A9A9;
-  background: rgb(40,40,40, .7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(1px);
-  padding: 10px;
-  border-radius: 5px;
-  top: 50px;
-  right: 10px;
-  position: absolute;
-  opacity: 0;
+    width: 160px;
+    color: #A9A9A9;
+    background: rgb(40,40,40, .7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(1px);
+    padding: 10px;
+    border-radius: 5px;
+    top: 50px;
+    right: 10px;
+    position: absolute;
+    opacity: 0;
 }
 .animation_for_log{
-  animation-name: show_log;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+    animation-name: show_log;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes show_log{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .design_input{
-  border-radius: 3px;
-  border: none;
-  width: 80%;
+    border-radius: 3px;
+    border: none;
+    width: 80%;
 }
 
 .design_create{
-  border-radius: 3px;
-  height: 25px;
-  font-size: 12px;
-  border: none;
-  background: white;
-  margin-top: 3px;
+    border-radius: 3px;
+    height: 25px;
+    font-size: 12px;
+    border: none;
+    background: white;
+    margin-top: 3px;
 }
 
 #go_day_night{
-  background: none;
-  border: none;
+    background: none;
+    border: none;
 }
 
 #theme_line{
-  margin-left: 35px;
-  background: rgba(169, 169, 169, .8);
-  height: 2px;
-  width: 30px;
+    margin-left: 35px;
+    background: rgba(169, 169, 169, .8);
+    height: 2px;
+    width: 30px;
 }

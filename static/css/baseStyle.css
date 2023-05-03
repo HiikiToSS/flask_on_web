@@ -89,7 +89,7 @@ html, body{
 }
 #sidebar.active {
     left: 0px;
-    /*height: 20%;*/
+    height: auto;
     transition: left 600ms, height 0ms;
 }
 
