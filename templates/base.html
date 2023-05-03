@@ -56,13 +56,13 @@ let day_night_text = document.getElementById("go_day_night")
 
 if (localStorage.getItem('theme') == "true"){
     console.log('Смена на темную')
-    nav_theme.href = "C:/Users/nifi2/Documents/фласк на веб'е/flask_on_web-2/static/dark-theme/navigation-dark.css"
+    nav_theme.href = "{{url_for('static', filename='dark-theme/navi-dark.css')}}"
     if (day_night_text){day_night_text.innerHTML = 'На дневную'}
 }
 
 else{
     console.log('Смена на светлую')
-    nav_theme.href = "C:/Users/nifi2/Documents/фласк на веб'е/flask_on_web-2/static/css/baseStyle.css"
+    nav_theme.href = "{{url_for('static', filename='css/baseStyle.css')}}"
     if (day_night_text){day_night_text.innerHTML = 'На ночную'}
 }
 
