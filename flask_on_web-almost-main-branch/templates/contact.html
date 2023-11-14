@@ -1,0 +1,34 @@
+{%extends "base.html"%}
+
+{%block head%}
+{{super()}}
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../static/css/contacts.css" id = 'switch_contacts'>
+{%endblock%}
+
+
+{%block content%}
+
+{%block navi%}
+{{super()}}
+{%endblock%}
+  
+
+<div id = cont_for_contacts>
+    <div id = conta_1>
+        <div id = cont_for_numb>+7 (926) 798-89-61</div>
+    </div>
+    <div id = conta_2>
+        <div id = cont_for_mail>{{gmail}}</div>
+    </div>
+    <div id = conta_3>
+        <div id = cont_for_social>Телеграмм: {{tg}}   Вк: {{vk}}</div>
+    </div>
+</div>
+
+<!--<a class = 'go_back' href="../index.html">Вернуться на главную</a>-->
+
+{%block script%}
+{{super()}}
+{%endblock%}
+{%endblock%}

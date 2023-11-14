@@ -1,0 +1,74 @@
+.design_card{
+    border-radius: 10px;
+    padding: 15px;
+    width: 270px;
+    background: rgba(152, 191, 200, .4);
+    margin: 20px;
+    flex-wrap: wrap;
+    /* почему то при использовани глассморфизма навиганция залезает под языки*/
+}
+
+.design_card_a{
+    color: #2c1376;
+    font-size: 25px;
+}
+
+.design_input{
+    width: 100%;
+}
+
+.design_button{
+    padding: 0.6em;
+    border: 1px solid #3a88fe;
+    border-radius: 4px;
+    background: #3a88fe;
+    font-size: 15px;
+    margin-top: 15px;
+}
+.design_button:hover{
+    background: #8ab9ff;
+}
+
+a{
+    color: #323232;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.design_leng{
+    padding: 5px;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.cards-container{
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.total{
+    display: flex;
+    margin-top: 20px;
+}
+
+#sidebar{
+    background: rgb(152, 191, 200, .4);
+    border-radius: 0px 0px 15px 0px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(1.5px);
+    top: 0px;
+}
+
+.show_more_info{
+    display: none;
+}
+
+.info{
+    display: none;
+}

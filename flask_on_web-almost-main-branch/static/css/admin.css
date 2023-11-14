@@ -1,0 +1,15 @@
+html, body {
+    /* Убирает прокрутку по горизонтале, для мобильной версии */
+    overflow-x: hidden;
+}
+
+canvas{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: -1000;
+}
+
+#main_cont{
+    border: 2px solid red;
+}

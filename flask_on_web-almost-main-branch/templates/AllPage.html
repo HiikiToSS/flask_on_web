@@ -1,0 +1,40 @@
+{%extends "base.html"%}
+
+{%block head%}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='css/langs.css')}}" id = 'switch_langs'>
+{%endblock%}
+
+{%block content%}
+
+<div class = 'cc_for_lang'><div class = cont_for_lang>{{langInfo.title}}</div></div>
+
+<div class = cont_for_h_disc>
+<div class = cont_for_desc> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad quisquam nesciunt culpa facilis similique, cumque voluptas facere dolorem, voluptate aspernatur dignissimos quas ipsam odio laboriosam provident nulla et exercitationem! Accusamus velit quod temporibus voluptatibus ullam non tempora consequatur ducimus consequuntur? </div>
+
+<div class = hello_world><div class = cont_for_hello>{{langInfo.hello}}</div><img id = 'langID' src="{{url_for('static', filename='img/hi/'+langInfo.photoLight)}}" alt=""></div>
+</div>
+
+<!-- Нужна здэлатб адаптывным, очинь!!1 -->
+
+<script>
+let langs_theme = document.getElementById("switch_langs")
+let lang_img = document.getElementById('langID')
+
+if (localStorage.getItem('theme') == "true"){
+    if (lang_img){lang_img.src = "{{url_for('static', filename='img/hi/'+langInfo.photoDark)}}"}
+    langs_theme.href = "{{url_for('static', filename='dark-theme/dark-langs.css')}}"
+}
+
+else{
+    if (lang_img){lang_img.src = "{{url_for('static', filename='img/hi/'+langInfo.photoLight)}}"}
+    langs_theme.href = "{{url_for('static', filename='css/langs.css')}}"
+}
+
+</script>
+
+{%block navi%}
+{{super()}}
+{%endblock%}
+  
+{%endblock%}

@@ -1,0 +1,41 @@
+html, body {
+    /* Убирает прокрутку по горизонтали */
+    overflow-x: hidden;
+}
+
+#design_minimalism:hover{
+    color: white;
+}
+
+#div_mini{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#design_minimalism{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    font-size: 4em;
+    white-space: nowrap;
+    position: absolute;
+    min-height: 1em;
+    width: 7em;
+    transition: color 1.5s;
+    animation-name: slow-show;
+    animation-duration: 2s;
+} 
+
+@keyframes slow-show{
+    0%{
+        transform: translateY(130%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,56 @@
+{%extends "base.html"%}
+
+{%block head%}
+{{super()}}
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../static/css/language.css" id = 'switch_lang'>
+{%endblock%}
+
+{%block content%}
+
+<!--
+<button class=hide_log onclick='show_log()'>Log in</button>
+<div id='cont_for_log'>
+    <div>Введи логин <input class='design_input' type='text'></div>
+    <div>Введи пароль <input class='design_input' type='password'></div>
+    <button class='design_create'>Войти</button>
+</div>
+
+<button class=hide_reg onclick='show_reg()'>Sign up</button>
+<div id='cont_for_reg'>
+    <div>Введи логин <input class='design_input' type='text'></div>
+    <div>Введи пароль <input class='design_input' type='password'></div>
+    <button class='design_create'>Создать аккаунт</button>
+</div>
+-->
+{%block navi%}
+{{super()}}
+{%endblock%}
+
+
+<div class='total'>
+<div class='cards-container'>
+    {%for el in language_description%}
+    <div class='design_card'>
+        <div class='design_leng'>
+            <b><a href='langs/{{el["link"]}}'>{{el["lang_name"]}}</a></b>
+        </div>
+        <div>
+            <a class="design_card_a" href='{{el["lang_name"]}}'>{{el["lang_name"]}}</a>   
+            {{el["desc"]}}
+        </div>
+    </div>
+    {%endfor%}
+</div>
+</div>
+  <!--<a class='go_back' href="../index.html">Вернуться на главную</a>-->
+
+  <!-- <div class="footer">
+  <div>Copyright &copy;2023 <strong>Programist'ы inc</strong>.All Rights Reserved.</div>
+</div> -->
+
+<!-- дань памяти <button class=small_button onclick='turn_night_on()'><img class='small_moon' src="../static/img/ночь1.png"alt=""></button>-->
+{%block script%}
+{{super()}}
+{% endblock %}
+{%endblock%}
